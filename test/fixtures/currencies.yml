@@ -1,0 +1,17 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  category: MyString
+  name: MyString
+  price: 1
+  rank: 1
+  day_change: MyString
+  user_id: 1
+
+two:
+  category: MyString
+  name: MyString
+  price: 1
+  rank: 1
+  day_change: MyString
+  user_id: 1

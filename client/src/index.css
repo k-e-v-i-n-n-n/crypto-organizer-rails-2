@@ -1,0 +1,345 @@
+body {
+  margin: 0;
+  padding: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+display: flex;
+justify-content: center;
+/* align-items: center; */
+
+}
+
+/* .app{
+  display: flex;
+  justify-content: center;
+
+} */
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
+
+/* ------------------------------------HEADER */
+.header-container{
+display: flex;
+justify-content: center;
+flex-direction: column;
+align-items: center;
+}
+
+.header-title-container{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100vw;
+  border-bottom: 1px solid black;
+}
+
+.space-div-left{
+  width:302px;
+}
+
+.header-title{
+
+  display: flex;
+  justify-content: center;
+  width:302px;
+  flex-direction: column;
+  padding:14px;
+}
+
+.header-title h1, h7{
+  text-align: center;
+  margin:0;
+}
+
+.space-div-right{
+  display: flex;
+  justify-content: flex-end;
+  width:302px;
+
+}
+
+.avatar-container{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  padding-right: 60px;
+}
+
+.avatar{
+  height: 20px;
+  width: 20px;
+
+}
+
+.logged-in{
+  padding: 0 14px;
+}
+
+.login-btn{
+  all: unset;
+  padding: 0 10px;
+}
+
+.logout-btn{
+
+  font-size:10px;
+  padding: 3px 0;
+}
+
+.search-input{
+  width: 414px;
+  margin: 14px;
+  padding: 10px;
+  border: solid 1px black;
+  border-radius: 2px;
+}
+
+/* ------------------------------------SEARCH RESULT */
+
+
+.search-result-container{
+
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+
+}
+
+.search-result-container h4{
+  text-align: center;
+}
+
+.result-tags-container{
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  width: 1000px;
+  margin: 0 14px 14px 14px;
+  border: solid 1px black ;
+  border-radius: 2px;
+
+}
+
+.result-tags-container h4{
+  font-weight: 400;
+  margin:0px;
+  padding: 14px;
+}
+
+.results-p{
+
+  display: flex;
+  justify-content: center;
+}
+
+.results-p p{
+  display: flex;
+  justify-content: center;
+  font-size: 14px;
+  font-weight: 300;
+  width: 150px;
+}
+
+.save-buttons-container{
+
+  display: flex;
+  justify-content: center;
+ 
+}
+
+.save-buttons{
+  width: 100px;
+  background-color: transparent;
+  margin: 0 3px;
+  border: solid 1px black ;
+  border-radius: 2px;
+
+}
+
+/* ------------------------------------ORGANIZER */
+.organizer-container{
+  display: flex;
+  justify-content: center;
+}
+
+.organizer-inner{
+
+  display: flex;
+  justify-content: flex-start;
+  flex-direction: column;
+  /* border: solid 1px black ;
+  border-radius: 2px; */
+  margin: 14px;
+  width:1500px;
+  height: 1000px;
+  overflow: visible;
+
+}
+
+.organizer-titles-container{
+  display: flex;
+  justify-content: center;
+
+}
+
+.organizer-titles{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 40px;
+  width: 300px;
+  margin: 14px;
+  border: solid 1px black ;
+  border-radius: 2px;
+  font-size: 20px;
+  font-weight: 600;
+}
+
+.organizer-columns-container{
+
+  display: flex;
+  justify-content: center;
+}
+
+.organizer-column{
+
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  flex-direction: column;
+  width: 300px;
+  height: 800px;
+  overflow: visible;
+  margin: 0 14px;
+  border: solid 1px black ;
+  border-radius: 2px;
+}
+
+/* ------------------------------------CARD */
+
+.card-cont{
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  height: 140px;
+  width: 270px;
+  margin: 14px;
+  border: solid 1px black ;
+  border-radius: 2px;
+}
+
+.card-title{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0px;
+  font-size: 16px;
+  font-weight: 500px;
+}
+
+.card-stats{
+
+  font-size: 14px;
+  font-weight: 300;
+  padding: 0px 6px;
+}
+
+
+/* ------------------------------------LOGIN MODAL */
+
+.overlay{
+  position: absolute;
+  top:0;
+  left:0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, .8);
+}
+
+.modal{
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  width: 500px;
+  background-color: white;
+  padding: 40px;
+  border-radius: 7px;
+  box-shadow: rgba(0,0,0,0.05) 0 6px 24px 0, rgba(0,0,0,0.08) 0 0 0 1px;
+}
+
+.auth-container{
+
+  display: flex;
+  justify-content: center;
+  margin:5px;
+}
+
+.auth-container-box{
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  background-color: white;
+  overflow: hidden;
+  box-shadow: rgba(0,0,0,0.05) 0 6px 24px, rgba(0,0,0,0.08) 0 0 0 1px;
+
+  height: 300px;
+  width: 475px;
+  border-radius: 7px;
+}
+
+.auth-container-box form{
+
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  height: 375px;
+  padding:10px;
+
+  gap:10px;
+}
+
+.auth-title{
+
+  padding: 0px;
+  margin: 0px;
+}
+
+.auth-options{
+
+  display: flex;
+}
+
+.auth-options button {
+
+  width: 50%;
+  padding: 10px;
+  border: none;
+  color: rgb(35,38,47);
+}
+
+.auth-x{
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 12px;
+  position: relative;
+
+  top: 6px;
+  left: 446px;
+  width: 22px;
+  height: 24px;
+
+  background-color: transparent;
+  border: .2px solid black;
+  border-radius: 7px;
+}
+
