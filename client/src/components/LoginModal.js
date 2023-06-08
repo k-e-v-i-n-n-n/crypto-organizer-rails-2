@@ -45,7 +45,7 @@ const LoginModal = ({setShowModal}) => {
       return (
         <div className="overlay">
          
-                <div className="auth-container" >
+                {/* <div className="auth-container" > */}
                         <div className="auth-container-box">
                           <button className="auth-x" onClick={(()=> setShowModal(false))}>X</button>
                         <form className="login-form">
@@ -65,7 +65,7 @@ const LoginModal = ({setShowModal}) => {
                             >Login</button>
                         </div>
                         </div>
-                </div>
+                {/* </div> */}
             
         </div>
       )

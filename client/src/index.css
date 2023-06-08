@@ -290,7 +290,7 @@ align-items: center;
   overflow: hidden;
   box-shadow: rgba(0,0,0,0.05) 0 6px 24px, rgba(0,0,0,0.08) 0 0 0 1px;
 
-  height: 300px;
+  /* height: 280px; */
   width: 475px;
   border-radius: 7px;
 }
@@ -300,7 +300,7 @@ align-items: center;
   display: flex;
   justify-content: center;
   flex-direction: column;
-  height: 375px;
+  height: 180px;
   padding:10px;
 
   gap:10px;
@@ -315,6 +315,7 @@ align-items: center;
 .auth-options{
 
   display: flex;
+  /* justify-self: flex-end; */
 }
 
 .auth-options button {
@@ -341,5 +342,10 @@ align-items: center;
   background-color: transparent;
   border: .2px solid black;
   border-radius: 7px;
+}
+
+.auth-x:hover{
+  color: white;
+  background-color: black;
 }
 
