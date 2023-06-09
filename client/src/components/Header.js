@@ -9,7 +9,7 @@ const Header = ({showModal, setShowModal}) => {
 
     const {user, setUser} = useContext(AppContext)
     const [searchTerm, setSearchTerm] = useState("")
-    const [coin, setCoin] = useState({})
+    const [coin, setCoin] = useState()
 
 
     function searchIt(e){
@@ -19,7 +19,7 @@ const Header = ({showModal, setShowModal}) => {
         fetch(`https://api.coincap.io/v2/assets/${searchTerm.toLowerCase()}`,{
             method: "GET",
             headers: {'Content-Type': 'application/json',}})
-        .then((r) => r.json()).then((r) => {setCoin(r); console.log("coin res", r)})
+        .then((r) => r.json()).then((r) => {setCoin(r.data); console.log("coin res", coin); setSearchTerm("")})
         .catch((err) => {console.log("error", err); alert(err)})
     }
 
@@ -53,7 +53,7 @@ const Header = ({showModal, setShowModal}) => {
                
         
             <div className="header-result">
-                <SearchResult/>
+                <SearchResult coin={coin} setCoin={setCoin}/>
             </div>
         </div>
     )
