@@ -50,7 +50,7 @@ align-items: center;
   padding:14px;
 }
 
-.header-title h1, h7{
+.header-title h1, h6{
   text-align: center;
   margin:0;
 }
@@ -275,13 +275,6 @@ align-items: center;
   box-shadow: rgba(0,0,0,0.05) 0 6px 24px 0, rgba(0,0,0,0.08) 0 0 0 1px;
 }
 
-.auth-container{
-
-  display: flex;
-  justify-content: center;
-  margin:5px;
-}
-
 .auth-container-box{
   display: flex;
   justify-content: center;
@@ -331,7 +324,7 @@ align-items: center;
   display: flex;
   justify-content: center;
   align-items: center;
-  font-size: 12px;
+  font-size: 8px;
   position: relative;
 
   top: 6px;

@@ -1,6 +1,6 @@
 import SearchResult from "./SearchResult"
 import avatar from "../images/avatar.png"
-import {useContext} from "react"
+import {useContext, useState} from "react"
 import { AppContext } from "../Context"
 import App from "../App"
 
@@ -8,12 +8,25 @@ import App from "../App"
 const Header = ({showModal, setShowModal}) => {
 
     const {user, setUser} = useContext(AppContext)
+    const [searchTerm, setSearchTerm] = useState("")
+    const [coin, setCoin] = useState({})
+
+
+    function searchIt(e){
+
+        e.preventDefault()
+ 
+        fetch(`https://api.coincap.io/v2/assets/${searchTerm.toLowerCase()}`,{
+            method: "GET",
+            headers: {'Content-Type': 'application/json',}})
+        .then((r) => r.json()).then((r) => {setCoin(r); console.log("coin res", r)})
+        .catch((err) => {console.log("error", err); alert(err)})
+    }
 
     function logout(){
         fetch("/api/logout", {
             method: "DELETE"
-        }).then((r)=> r.json()).then(() => setUser(null))
-    }   
+        }).then((r)=> r.json()).then(() => setUser(null))}   
 
     return(
 
@@ -22,7 +35,7 @@ const Header = ({showModal, setShowModal}) => {
                 <div className="space-div-left"></div>
                 <div className="header-title">
                     <h1>CRYPTOCURRENCY</h1>
-                    <h7>A Daily Crypto Organizer</h7>
+                    <h6>A Daily Crypto Organizer</h6>
                 </div>
                 <div className="space-div-right">
                     <div className="logged-in">{user? `Hello, ${user?.username}`:<button className="login-btn" onClick={()=> setShowModal(true)}>Login</button>  }   </div>
@@ -32,8 +45,11 @@ const Header = ({showModal, setShowModal}) => {
                     </div>
                 </div>
             </div>
-           
-                <input className="search-input" placeholder="Search Currency"/>
+                <form onSubmit={(e)=> searchIt(e)}>
+                <input  value={searchTerm} className="search-input" placeholder="Search Currency" onChange={(e)=> setSearchTerm(e.target.value)} />
+                <button style={{display:"none"}} type="submit"/>
+                </form>
+             
                
         
             <div className="header-result">

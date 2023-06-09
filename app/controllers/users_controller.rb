@@ -19,6 +19,17 @@ class UsersController < ApplicationController
         end
     end
 
+    def index
+
+        user = User.find_by(id: session[:user_id])
+        if user
+            render json: user
+        else
+            render json: {error: "Unauthorized"}, status: :unauthorized
+        end
+
+    end
+
     private
 
     def not_valid(invalid)
