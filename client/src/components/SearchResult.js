@@ -2,12 +2,13 @@ const SearchResult = ({coin, setCoin}) => {
 
 // let price = parseFloat(coin?.priceUsd).toFixed(2)
 let day_change = parseFloat(coin?.changePercent24Hr).toFixed(2)
+let coinCapitalized = coin?.id.charAt(0).toUpperCase() + coin?.id.slice(1)
 
     return(
 
         <div className="search-result-container">
             <div className="result-tags-container">
-                <h4>{coin ? coin.id : "Currency"}</h4>
+                <h4>{coin ? coinCapitalized : "Currency"}</h4>
                 <div className="results-p">
                     <p>Price {coin && parseFloat(coin?.priceUsd).toFixed(2) }</p>
                     <p>Rank {coin && coin?.rank}</p>
