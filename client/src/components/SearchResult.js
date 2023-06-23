@@ -1,8 +1,28 @@
+import {useState} from 'react'
+
 const SearchResult = ({coin, setCoin}) => {
 
-// let price = parseFloat(coin?.priceUsd).toFixed(2)
+    const [saveCat, setSaveCat] = useState(null)
+
+
 let day_change = parseFloat(coin?.changePercent24Hr).toFixed(2)
 let coinCapitalized = coin?.id.charAt(0).toUpperCase() + coin?.id.slice(1)
+console.log("coin", coin)
+
+function saveCoin(){
+
+    fetch('api/currencies', {
+
+        method: 'POST',
+        headers:{"Content-Type": "application/json"},
+        body:JSON.stringify({
+            category: saveCat, 
+            price: parseFloat(coin?.priceUsd).toFixed(2),
+            rank: coin.rank,
+            day_change: coin.day_change,
+        })
+    }).then((r) => r.json()).then((r) => console.log("saveCoin", r))
+}
 
     return(
 
@@ -16,10 +36,10 @@ let coinCapitalized = coin?.id.charAt(0).toUpperCase() + coin?.id.slice(1)
                 </div>
             </div>
             <div className="save-buttons-container">
-                <button className="save-buttons">Buy</button>
-                <button className="save-buttons">Sell</button>
-                <button className="save-buttons">Hold</button>
-                <button className="save-buttons">Watch</button>
+                <button name="Buy" className="save-buttons" onClick={(e) => {setSaveCat({category: e.target.name}); saveCoin()}}>Buy</button>
+                <button name="Sell" className="save-buttons">Sell</button>
+                <button name="Hold" className="save-buttons">Hold</button>
+                <button name="Watch" className="save-buttons">Watch</button>
             </div>
         </div>
     )

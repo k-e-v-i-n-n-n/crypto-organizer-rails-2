@@ -161,6 +161,12 @@ align-items: center;
 
 }
 
+.save-buttons:hover{
+
+  color: white;
+  background-color: black;
+}
+
 /* ------------------------------------ORGANIZER */
 .organizer-container{
   display: flex;
