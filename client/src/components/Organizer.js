@@ -6,10 +6,15 @@ const Organizer = () =>{
 
     const {user, setUser} = useContext(AppContext)
 
-    let buyMap 
+    console.log("organizer cur", user?.currencies)
+
+    let currenciesArr = user?.currencies
+
+    let buyMap = currenciesArr?.map((currency) => {return <Card key={currency.id} currency={currency}/> })
     // let sellMap = 
     // let holdMap = 
     // let watchMap = 
+
 
 
     return(
@@ -22,12 +27,10 @@ const Organizer = () =>{
                     <p className="organizer-titles">Watch</p>
                 </div>
                 <div className="organizer-columns-container">
-                        <div className="organizer-column">
-                        
-                        </div>
-                        <div className="organizer-column"></div>
-                        <div className="organizer-column"></div>
-                        <div className="organizer-column"></div>
+                    <div className="organizer-column">{buyMap}</div>
+                    <div className="organizer-column"></div>
+                    <div className="organizer-column"></div>
+                    <div className="organizer-column"></div>
                 </div>
             </div>
         </div>
