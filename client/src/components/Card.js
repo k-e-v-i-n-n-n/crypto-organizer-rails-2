@@ -9,7 +9,6 @@ const Card = () => {
                 <p className="card-stats">Day Change</p>
             </div>
         </div>
-
     )
 }
 

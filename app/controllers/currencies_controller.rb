@@ -25,7 +25,7 @@ class CurrenciesController < ApplicationController
     private
     
     def currency_params
-        params.permit(:category, :price, :rank, :day_change)
+        params.permit(:name, :category, :price, :rank, :day_change)
     end
 
     def unprocessable(invalid)

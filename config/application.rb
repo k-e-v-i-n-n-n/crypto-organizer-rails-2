@@ -29,6 +29,9 @@ module ReactRailsApiProjectTemplate
     # https://owasp.org/www-community/SameSite
     config.action_dispatch.cookies_same_site_protection = :strict
 
+    config.action_controller.default_url_options = { host: 'localhost', port: 3000 }
+
+
     # Initialize configuration defaults for originally generated Rails version.
     config.load_defaults 6.1
 

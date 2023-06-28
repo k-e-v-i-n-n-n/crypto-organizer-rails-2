@@ -26,7 +26,7 @@ const Header = ({showModal, setShowModal}) => {
     function logout(){
         fetch("/api/logout", {
             method: "DELETE"
-        }).then((r)=> r.json()).then(() => setUser(null))}   
+        }).then(() => setUser(null))}   
 
     return(
 

@@ -1,6 +1,16 @@
 import Card from "./Card"
+import {useContext}  from "react"
+import {AppContext} from '../Context.js'
 
 const Organizer = () =>{
+
+    const {user, setUser} = useContext(AppContext)
+
+    let buyMap 
+    // let sellMap = 
+    // let holdMap = 
+    // let watchMap = 
+
 
     return(
         <div className="organizer-container">
@@ -13,10 +23,7 @@ const Organizer = () =>{
                 </div>
                 <div className="organizer-columns-container">
                         <div className="organizer-column">
-                            <Card/>
-                            <Card/>
-                            <Card/>
-                            <Card/>
+                        
                         </div>
                         <div className="organizer-column"></div>
                         <div className="organizer-column"></div>
