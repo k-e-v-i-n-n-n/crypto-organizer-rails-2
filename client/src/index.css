@@ -255,6 +255,14 @@ align-items: center;
   padding: 0px 6px;
 }
 
+.card-delete{
+
+  position: relative;
+  top: 170px;
+  left: 257px;
+
+}
+
 
 /* ------------------------------------LOGIN MODAL */
 
