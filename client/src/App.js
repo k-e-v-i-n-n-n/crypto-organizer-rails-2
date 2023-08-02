@@ -13,9 +13,10 @@ function App() {
   useEffect(() => {
     fetch('/api/me')
     .then((r)=>{
-      if(r.ok){r.json().then((r) => setUser(r))}
+      if(r.ok){r.json().then((r) => {setUser(r); console.log("user", r)})}
       else{setShowModal(true)}})
   }, [])
+
 
 
   return (

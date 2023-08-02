@@ -6,11 +6,12 @@ const Organizer = () =>{
 
     const {user, setUser} = useContext(AppContext)
 
-    console.log("organizer cur", user?.currencies)
+    
 
     let currenciesArr = user?.currencies
+    console.log("type", typeof user?.currencies)
 
-    let buyMap = currenciesArr?.map((currency) => {return <Card key={currency.id} currency={currency}/> })
+    let buyMap = Array.isArray(currenciesArr) ? currenciesArr?.map((currency) => {return <Card key={currency.id} currency={currency}/> }) : []
     // let sellMap = 
     // let holdMap = 
     // let watchMap = 

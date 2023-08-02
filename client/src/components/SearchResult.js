@@ -17,11 +17,11 @@ e.preventDefault();
         method: 'POST',
         headers:{"Content-Type": "application/json"},
         body:JSON.stringify({
-            name: coin.name,
+            name: coin?.name,
             category: e.target.name, 
             price: parseFloat(coin?.priceUsd).toFixed(2),
-            rank: coin.rank,
-            day_change: coin.day_change,
+            rank: coin?.rank,
+            day_change: coin?.day_change,
         })
     }).then((r) => r.json()).then((r) => {addCoin(r); console.log("saveCoin", r)})
 }
@@ -29,8 +29,8 @@ e.preventDefault();
 function addCoin(r){
     
 
-    let currencies = user.currencies
-    let updateCurrencies = currencies.push(r)
+    let currencies = user?.currencies
+    let updateCurrencies = currencies?.push(r)
     setUser({...user, currencies: updateCurrencies})
 
     console.log("addCoin updated", user)
