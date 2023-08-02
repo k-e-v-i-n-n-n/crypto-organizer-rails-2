@@ -1,12 +1,24 @@
+import {AppContext} from "../Context"
+import {useContext} from "react"
+
 const Card = ({currency}) => {
+
+    const {user, setUser} = useContext(AppContext)
 
     function deleteCard(e){
         e.preventDefault();
 
         fetch(`/api/currencies/${currency.id}`, {
-            method: "DELETE"})
+            method: "DELETE"}).then((r) => { console.log("r", r)}).then((r) => deleteState(r))
+    }
 
+    
 
+    function deleteState(r){
+        let currencies = user.currencies
+        let currenciesFilter = currencies.filter((c) => c.id != currency.id)
+        setUser({...user, currencies: currenciesFilter})
+        console.log("currencies", currenciesFilter)
     }
 
     return (
