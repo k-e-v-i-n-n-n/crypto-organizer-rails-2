@@ -26,11 +26,12 @@ const Card = ({currency}) => {
             <p className="card-title">{currency.name}</p>
             
             <div className="card-stats-cont">
-                <p className="card-stats">{parseFloat(currency?.price).toFixed(2)}</p>
-                <p className="card-stats">{currency.rank}</p>
+                <p className="card-stats"><span className="card-stats-bold">Price</span>  • {parseFloat(currency?.price).toFixed(2)}</p>
+                <p className="card-stats"><span className="card-stats-bold"> Rank </span> • {currency.rank}</p>
                 <p className="card-stats">{currency.day_change}</p>
+                <p className="card-delete" onClick={(e) => deleteCard(e)} >x</p>
             </div>
-            <p className="card-delete" onClick={(e) => deleteCard(e)} >x</p>
+            
         </div>
     )
 }
