@@ -5,7 +5,7 @@ class CreateCurrencies < ActiveRecord::Migration[7.0]
       t.string :name
       t.integer :price
       t.integer :rank
-      t.string :day_change
+      t.decimal :day_change
       t.integer :user_id
 
       t.timestamps

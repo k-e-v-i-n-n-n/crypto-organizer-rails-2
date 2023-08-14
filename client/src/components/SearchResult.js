@@ -20,7 +20,7 @@
                 category: e.target.name, 
                 price: parseFloat(coin?.priceUsd).toFixed(2),
                 rank: coin?.rank,
-                day_change: coin?.day_change,
+                day_change: parseFloat(coin?.changePercent24Hr).toFixed(2) || "0.00",
             })
         }).then((r) => r.json()).then((r) => {addCoin(r); console.log("saveCoin", r)})
     }

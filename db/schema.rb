@@ -19,7 +19,7 @@ ActiveRecord::Schema[7.0].define(version: 2023_06_07_132525) do
     t.string "name"
     t.integer "price"
     t.integer "rank"
-    t.string "day_change"
+    t.decimal "day_change"
     t.integer "user_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
