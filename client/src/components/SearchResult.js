@@ -20,7 +20,7 @@
                 category: e.target.name, 
                 price: parseFloat(coin?.priceUsd).toFixed(2),
                 rank: coin?.rank,
-                day_change: parseFloat(coin?.changePercent24Hr).toFixed(2) || "0.00",
+                day_change: parseFloat(coin?.changePercent24Hr).toFixed(2),
             })
         }).then((r) => r.json()).then((r) => {addCoin(r); console.log("saveCoin", r)})
     }
@@ -42,7 +42,7 @@
                     <div className="results-p">
                         <p><span className="card-stats-bold">Price</span>  • {coin && parseFloat(coin?.priceUsd).toFixed(2) }</p>
                         <p><span className="card-stats-bold">Rank</span>  • {coin && coin?.rank}</p>
-                        <p><span className="card-stats-bold">Day Change</span>  • {coin && day_change}</p>
+                        <p><span className="card-stats-bold">Day Change</span>  • {coin && `${day_change} %`}</p>
                     </div>
                 </div>
                 <div className="save-buttons-container">
