@@ -47,9 +47,9 @@
                 </div>
                 <div className="save-buttons-container">
                     <button name="Buy" className="save-buttons" onClick={(e) => {saveCoin(e)}}>Buy</button>
-                    <button name="Sell" className="save-buttons">Sell</button>
-                    <button name="Hold" className="save-buttons">Hold</button>
-                    <button name="Watch" className="save-buttons">Watch</button>
+                    <button name="Sell" className="save-buttons" onClick={(e) => {saveCoin(e)}}>Sell</button>
+                    <button name="Hold" className="save-buttons" onClick={(e) => {saveCoin(e)}}>Hold</button>
+                    <button name="Watch" className="save-buttons" onClick={(e) => {saveCoin(e)}}>Watch</button>
                 </div>
             </div>
         )
