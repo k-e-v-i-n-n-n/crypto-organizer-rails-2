@@ -12,6 +12,10 @@
 
     function saveCoin(e){
     e.preventDefault();
+    if(!coin){
+        alert("Please search a currency before adding...")
+    }
+    else{
         fetch('api/currencies', {
             method: 'POST',
             headers:{"Content-Type": "application/json"},
@@ -23,6 +27,7 @@
                 day_change: parseFloat(coin?.changePercent24Hr).toFixed(2),
             })
         }).then((r) => r.json()).then((r) => {addCoin(r); console.log("saveCoin", r)})
+    }
     }
 
     function addCoin(r){

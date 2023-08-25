@@ -11,7 +11,6 @@ const Header = ({showModal, setShowModal}) => {
     const [searchTerm, setSearchTerm] = useState("")
     const [coin, setCoin] = useState()
 
-
     function searchIt(e){
 
         e.preventDefault()
@@ -50,8 +49,6 @@ const Header = ({showModal, setShowModal}) => {
                 <button style={{display:"none"}} type="submit"/>
                 </form>
              
-               
-        
             <div className="header-result">
                 <SearchResult coin={coin} setCoin={setCoin}/>
             </div>
