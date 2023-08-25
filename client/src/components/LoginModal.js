@@ -12,7 +12,7 @@ const LoginModal = ({setShowModal}) => {
   
     console.log("user", user)
   
-    const goLogin = (isIt) => {
+    const goLogin = (isIt) => { 
       setError(null)
       setIsLogIn(isIt)
     }
@@ -57,10 +57,10 @@ const LoginModal = ({setShowModal}) => {
                 </form>
                 <div className="auth-options">
                     <button onClick={() => {goLogin(false)}} 
-                    style={{backgroundColor : isLogIn ? 'rgb(200, 200, 200)' : 'rgb(255, 255, 255)'}}
+                    style={{backgroundColor : isLogIn ? 'rgb(200, 200, 200)' : 'rgb(255, 255, 255)', fontWeight: isLogIn ? 'normal' : 'bold', textDecoration: isLogIn ? 'none' : 'underline'}}
                     >Signup</button>
                     <button onClick={() => {goLogin(true)}}
-                    style={{backgroundColor : !isLogIn ? 'rgb(200, 200, 200)' : 'rgb(255, 255, 255)'}}
+                    style={{backgroundColor : !isLogIn ? 'rgb(200, 200, 200)' : 'rgb(255, 255, 255)', textDecoration: !isLogIn ? 'none' : 'underline', fontWeight: !isLogIn ? 'normal' : 'bold' }}
                     >Login</button>
                 </div>
             </div>      

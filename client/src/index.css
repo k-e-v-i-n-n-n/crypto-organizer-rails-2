@@ -85,8 +85,11 @@ align-items: center;
 }
 
 .login-btn{
-  all: unset;
+
+
+  all: unset; 
   padding: 0 10px;
+
 }
 
 .logout-btn{
@@ -327,6 +330,7 @@ align-items: center;
 }
 
 .auth-container-box{
+  position: relative;
   display: flex;
   justify-content: center;
   flex-direction: column;
@@ -367,7 +371,19 @@ align-items: center;
   width: 50%;
   padding: 10px;
   border: none;
+  /* all: unset; */
   color: rgb(35,38,47);
+
+
+  display: flex;
+  justify-content: center;
+  border-top: solid .3px black;
+
+  /* width: 50%;
+  padding: 10px;
+
+  color: rgb(35,38,47);
+  */
 }
 
 .auth-x{
@@ -375,17 +391,19 @@ align-items: center;
   display: flex;
   justify-content: center;
   align-items: center;
-  font-size: 8px;
-  position: relative;
+  font-size: 10px;
+  position: absolute;
 
   top: 6px;
-  left: 446px;
-  width: 22px;
-  height: 24px;
+  left: 450px;
+  /* width: 22px;
+  height: 24px; */
 
   background-color: transparent;
-  border: .2px solid black;
-  border-radius: 7px;
+  /* border: .2px solid black; */
+  border-radius: 2px;
+  border: none;
+  z-index: 2;
 }
 
 .auth-x:hover{
