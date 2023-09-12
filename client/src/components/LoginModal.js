@@ -52,7 +52,7 @@ const LoginModal = ({setShowModal}) => {
                     <input type="username" placeholder="username" onChange={(e)=> setUsername(e.target.value)} />
                     <input type="password" placeholder="password" onChange={(e)=> setPassword(e.target.value)} />
                     {!isLogIn && <input type="password" placeholder="password confirmation" onChange={(e)=> setPasswordConfirm(e.target.value)} />}
-                    <input type="submit" className="create" onClick={(e) => {handleSubmit(e, isLogIn? "login" : "signup")}}/>
+                    <button type="submit" className="create" onClick={(e) => {handleSubmit(e, isLogIn? "login" : "signup")}}>{isLogIn? "Login" : "Signup"}</button>
                     {error && <p>{error}</p>}
                 </form>
                 <div className="auth-options">
