@@ -13,8 +13,6 @@ const Card = ({currency}) => {
             method: "DELETE"}).then((r) => { console.log("r", r)}).then((r) => deleteState(r))
     }
 
-    
-
     function deleteState(r){
         let currencies = user.currencies
         let currenciesFilter = currencies.filter((c) => c.id != currency.id)
@@ -25,7 +23,6 @@ const Card = ({currency}) => {
     return (
         <div className="card-cont">
             <p className="card-title">{currency.name}</p>
-            
             <div className="card-stats-cont">
                 <p className="card-stats"><span className="card-stats-bold">Price</span> • {parseFloat(currency?.price).toFixed(2)}</p>
                 <p className="card-stats"><span className="card-stats-bold">Rank </span> • {currency.rank}</p>

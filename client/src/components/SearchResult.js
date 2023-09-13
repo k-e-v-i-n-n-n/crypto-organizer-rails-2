@@ -1,7 +1,6 @@
     import {useState, useContext} from 'react'
     import {AppContext} from '../Context'
 
-
     const SearchResult = ({coin, setCoin}) => {
 
         const {user, setUser} = useContext(AppContext)

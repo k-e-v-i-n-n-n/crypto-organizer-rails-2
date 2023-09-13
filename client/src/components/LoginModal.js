@@ -24,7 +24,6 @@ const LoginModal = ({setShowModal}) => {
         setError("Please check that passwords match")
         return
       }
-     
   
       fetch(`/api/${endpoint}`, {
         method: "POST",
@@ -40,8 +39,6 @@ const LoginModal = ({setShowModal}) => {
         {r.json().then((r) => {setUser(r); setShowModal(false); console.log("user r", r)})}
         else
         {console.log("user r", r)}})}
-      
-       
   
       return (
         <div className="overlay">

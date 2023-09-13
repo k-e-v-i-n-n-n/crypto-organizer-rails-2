@@ -14,12 +14,10 @@ const Organizer = () =>{
     let holdCat = Array.isArray(currenciesArr) ? currenciesArr.filter((curr) => curr.category === 'Hold') : []
     let watchCat = Array.isArray(currenciesArr) ? currenciesArr.filter((curr) => curr.category === 'Watch') : []
 
-    // let buyMap = Array.isArray(currenciesArr) ? currenciesArr?.map((currency) => {return <Card key={currency.id} currency={currency}/> }) : []
     let buyMap = buyCat.map((currency) => {return <Card key={currency.id} currency={currency}/>  } )
     let sellMap = sellCat.map((currency) => {return <Card key={currency.id} currency={currency}/>  } )
     let holdMap = holdCat.map((currency) => {return <Card key={currency.id} currency={currency}/>  } )
     let watchMap = watchCat.map((currency) => {return <Card key={currency.id} currency={currency}/>  } )
-
 
     return(
         <div className="organizer-container">
