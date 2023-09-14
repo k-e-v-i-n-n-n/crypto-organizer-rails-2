@@ -42,11 +42,11 @@
 
             <div className="search-result-container">
                 <div className="result-tags-container">
-                    <h4>{coin ? coinCapitalized : "Currency"}</h4>
+                    <div className="results-coin">{coin ? coinCapitalized : "Currency"}</div>
                     <div className="results-p">
                         <p className="card-stats"><span className="card-stats-bold">Price</span>{" "}{coin && `• ${parseFloat(coin?.priceUsd).toFixed(2)}`  }</p>
-                        <p><span className="card-stats-bold">Rank </span>{coin && `• ${coin?.rank}` }</p>
-                        <p><span className="card-stats-bold">Day Change </span>{coin && ` • ${day_change} %`}</p>
+                        <p className="card-stats"><span className="card-stats"></span>{coin && `• ${coin?.rank}` }</p>
+                        <p className="card-stats"><span className="card-stats">Day Change </span>{coin && ` • ${day_change} %`}</p>
                     </div>
                 </div>
                 <div className="save-buttons-container">

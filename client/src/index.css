@@ -34,7 +34,7 @@ align-items: center;
   justify-content: space-between;
   align-items: center;
   width: 100vw;
-  border-bottom: 1px solid black;
+  border-bottom: .5px solid black;
 }
 
 .space-div-left{
@@ -102,7 +102,7 @@ align-items: center;
   width: 414px;
   margin: 14px;
   padding: 10px;
-  border: solid 1px black;
+  border: solid .5px black;
   border-radius: 2px;
 }
 
@@ -129,12 +129,15 @@ align-items: center;
   flex-direction: column;
   width: 1000px;
   margin: 0 14px 14px 14px;
-  border: solid 1px black ;
+  border: solid .5px black ;
   border-radius: 2px;
 
 }
 
-.result-tags-container h4{
+.results-coin{
+  display: flex;
+  justify-content: center;
+  text-align: center;
   font-weight: bold;
   margin:0px;
   padding: 14px;
@@ -168,7 +171,7 @@ align-items: center;
   width: 100px;
   background-color: transparent;
   margin: 0 3px;
-  border: solid 1px black ;
+  border: solid .5px black ;
   border-radius: 2px;
 
 }
@@ -190,8 +193,6 @@ align-items: center;
   display: flex;
   justify-content: flex-start;
   flex-direction: column;
-  /* border: solid 1px black ;
-  border-radius: 2px; */
   margin: 14px;
   width:1500px;
   height: 1000px;
@@ -212,7 +213,7 @@ align-items: center;
   height: 40px;
   width: 300px;
   margin: 14px;
-  border: solid 1px black ;
+  border: solid .5px black ;
   border-radius: 2px;
   font-size: 20px;
   font-weight: 600;
@@ -234,7 +235,7 @@ align-items: center;
   height: 800px;
   overflow: visible;
   margin: 0 14px;
-  border: solid 1px black ;
+  border: solid .5px black ;
   border-radius: 2px;
   overflow: auto;
 }
@@ -248,7 +249,7 @@ align-items: center;
   min-height: 140px;
   min-width: 270px;
   margin: 14px 14px 0 14px;
-  border: solid 1px black ;
+  border: solid .3px black ;
   border-radius: 2px;
 }
 
@@ -277,6 +278,8 @@ align-items: center;
   font-weight: 300;
   margin: 0px;
   padding: 8px 8px;
+  width: 166px;
+
 }
 
 .card-stats-bold{
