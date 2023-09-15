@@ -27,6 +27,7 @@ display: flex;
 justify-content: center;
 flex-direction: column;
 align-items: center;
+
 }
 
 .header-title-container{
@@ -35,6 +36,7 @@ align-items: center;
   align-items: center;
   width: 100vw;
   border-bottom: .5px solid black;
+  background-color:rgb(248, 248, 248);
 }
 
 .space-div-left{
@@ -103,7 +105,8 @@ align-items: center;
   margin: 14px;
   padding: 10px;
   border: solid .5px black;
-  border-radius: 2px;
+  border-radius: 2.5px;
+  background-color:rgb(248, 248, 248);
 }
 
 /* ------------------------------------SEARCH RESULT */
@@ -115,6 +118,7 @@ align-items: center;
   justify-content: center;
   align-items: center;
   flex-direction: column;
+ 
   
 }
 
@@ -130,7 +134,8 @@ align-items: center;
   width: 1000px;
   margin: 0 14px 14px 14px;
   border: solid .5px black ;
-  border-radius: 2px;
+  border-radius: 2.5px;
+  background-color:rgb(248, 248, 248);
 
 }
 
@@ -148,9 +153,11 @@ align-items: center;
   display: flex;
   justify-content: center;
   align-items: center;
+  margin-bottom: 14px;
+}
 
   
-}
+
 
 .results-p p{
   display: flex;
@@ -169,10 +176,17 @@ align-items: center;
 
 .save-buttons{
   width: 100px;
-  background-color: transparent;
+  height: 18.5px;
+  /* background-color: white; */
+  background-color:rgb(248, 248, 248);
   margin: 0 3px;
   border: solid .5px black ;
-  border-radius: 2px;
+  border-radius: 2.5px;
+  color: black;
+
+  font-weight: bold;
+  font-size: 11px;
+
 
 }
 
@@ -213,10 +227,12 @@ align-items: center;
   height: 40px;
   width: 300px;
   margin: 14px;
+  margin-top:0px;
   border: solid .5px black ;
-  border-radius: 2px;
+  border-radius: 2.5px;
   font-size: 20px;
   font-weight: 600;
+  background-color:rgb(248, 248, 248);
 }
 
 .organizer-columns-container{
@@ -233,11 +249,14 @@ align-items: center;
   flex-direction: column;
   width: 300px;
   height: 800px;
+  min-height: 300px;
+
   overflow: visible;
   margin: 0 14px;
   border: solid .5px black ;
-  border-radius: 2px;
+  border-radius: 2.5px;
   overflow: auto;
+  background-color:rgb(248, 248, 248);
 }
 
 /* ------------------------------------CARD */
@@ -246,11 +265,12 @@ align-items: center;
   display: flex;
   justify-content: flex-start;
   flex-direction: column;
-  min-height: 140px;
+  min-height: 152.5px;
   min-width: 270px;
   margin: 14px 14px 0 14px;
   border: solid .3px black ;
-  border-radius: 2px;
+  border-radius: 3px;
+  background-color: white;
 }
 
 .card-title{
@@ -269,21 +289,24 @@ align-items: center;
 
   display: flex;
   justify-content: center;
+  align-items: center;
   flex-direction: column;
 }
+  
 
 .card-stats{
-
+  display: flex;
+  justify-content: center;
   font-size: 14px;
   font-weight: 300;
   margin: 0px;
   padding: 8px 8px;
-  width: 166px;
+  /* width: 166px; */
 
 }
 
 .card-stats-bold{
-  font-weight: bold;
+  font-weight: 300;
 }
 
 .card-delete{
@@ -291,9 +314,10 @@ align-items: center;
   justify-content: center;
   align-items: center;
   position: relative;
+  font-size: 12px;
 
-  /* top: 12px; */
-  left: 127px;
+  top: 3px;
+  left: 126px;
 
 
   text-align: center;
@@ -328,7 +352,7 @@ align-items: center;
   width: 500px;
   background-color: white;
   padding: 40px;
-  border-radius: 7px;
+  border-radius: 2.5px;
   box-shadow: rgba(0,0,0,0.05) 0 6px 24px 0, rgba(0,0,0,0.08) 0 0 0 1px;
 }
 
@@ -343,7 +367,7 @@ align-items: center;
 
   /* height: 280px; */
   width: 475px;
-  border-radius: 7px;
+  border-radius: 3px;
 }
 
 .auth-container-box form{
@@ -404,7 +428,7 @@ align-items: center;
 
   background-color: transparent;
   /* border: .2px solid black; */
-  border-radius: 2px;
+  border-radius: 2.5px;
   border: none;
   z-index: 2;
 }
