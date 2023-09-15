@@ -1,5 +1,6 @@
 import SearchResult from "./SearchResult"
 import avatar from "../images/avatar.png"
+import return_right from "../images/return_right.svg"
 import {useContext, useState} from "react"
 import { AppContext } from "../Context"
 import App from "../App"
@@ -44,9 +45,14 @@ const Header = ({showModal, setShowModal}) => {
                     </div>
                 </div>
             </div>
-                <form onSubmit={(e)=> searchIt(e)}>
-                <input  value={searchTerm} className="search-input" placeholder="Search Currency" onChange={(e)=> setSearchTerm(e.target.value)} />
-                <button style={{display:"none"}} type="submit"/>
+                <form className="search-container" onSubmit={(e)=> searchIt(e)}>
+                    {/* <div className="search-input-parent"> */}
+                    <div className="return-button"></div>
+                        <input  value={searchTerm} className="search-input" placeholder="Search Currency" onChange={(e)=> setSearchTerm(e.target.value)} />
+                    {/* </div> */}
+                    <img onClick={((e)=> searchIt(e))} className="return-button" src={return_right}/>
+                    {/* <button style={{display:"none"}} type="submit"/> */}
+          
                 </form>
              
             <div className="header-result">
