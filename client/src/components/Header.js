@@ -45,16 +45,13 @@ const Header = ({showModal, setShowModal}) => {
                     </div>
                 </div>
             </div>
-                <form className="search-container" onSubmit={(e)=> searchIt(e)}>
-                    {/* <div className="search-input-parent"> */}
-                    <div className="return-button"></div>
-                        <input  value={searchTerm} className="search-input" placeholder="Search Currency" onChange={(e)=> setSearchTerm(e.target.value)} />
-                    {/* </div> */}
-                    <img onClick={((e)=> searchIt(e))} className="return-button" src={return_right}/>
-                    {/* <button style={{display:"none"}} type="submit"/> */}
-          
+            <div className="search-container">
+                <form  onSubmit={(e)=> searchIt(e)}>
+                    <input  value={searchTerm} className="search-input" placeholder="Search Currency" onChange={(e)=> setSearchTerm(e.target.value)} />
                 </form>
-             
+                <img onClick={((e)=> searchIt(e))} className="return-button" src={return_right}/>
+            </div>
+
             <div className="header-result">
                 <SearchResult coin={coin} setCoin={setCoin}/>
             </div>
