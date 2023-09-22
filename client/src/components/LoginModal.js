@@ -48,8 +48,8 @@ const LoginModal = ({setShowModal}) => {
                   <button className="auth-x" onClick={(()=> setShowModal(false))}>X</button>
                   <form className="login-form">
                       <h2 className="auth-title">{isLogIn? "Please log in" : "Please sign up"}</h2>
-                      <input type="username" placeholder="username" onChange={(e)=> setUsername(e.target.value)} />
-                      <input type="password" placeholder="password" onChange={(e)=> setPassword(e.target.value)} />
+                      <input type="username" placeholder="kevin@blockchain.com" onChange={(e)=> setUsername(e.target.value)} />
+                      <input type="password" placeholder="********" onChange={(e)=> setPassword(e.target.value)} />
                       {!isLogIn && <input type="password" placeholder="password confirmation" onChange={(e)=> setPasswordConfirm(e.target.value)} />}
                       <button type="submit" className="create" onClick={(e) => {handleSubmit(e, isLogIn? "login" : "signup")}}>{isLogIn? "Login" : "Signup"}</button>
                       {error && <p>{error}</p>}
