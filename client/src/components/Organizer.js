@@ -7,7 +7,6 @@ const Organizer = () =>{
     const {user, setUser} = useContext(AppContext)
 
     let currenciesArr = user?.currencies
-    console.log("type", typeof user?.currencies)
 
     let buyCat = Array.isArray(currenciesArr) ? currenciesArr.filter((curr) => curr.category === 'Buy') : []
     let sellCat = Array.isArray(currenciesArr) ? currenciesArr.filter((curr) => curr.category === 'Sell') : []

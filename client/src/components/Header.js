@@ -3,8 +3,6 @@ import avatar from "../images/avatar.png"
 import return_right from "../images/return_right.svg"
 import {useContext, useState} from "react"
 import { AppContext } from "../Context"
-import App from "../App"
-
 
 const Header = ({showModal, setShowModal}) => {
 
@@ -27,6 +25,7 @@ const Header = ({showModal, setShowModal}) => {
         fetch("/api/logout", {
             method: "DELETE"
         }).then(() => setUser(null))}   
+
 
     return(
 
@@ -52,7 +51,6 @@ const Header = ({showModal, setShowModal}) => {
                 </form>
                 <img onClick={((e)=> searchIt(e))} className="return-button" src={return_right}/>
             </div>
-
             <div className="header-result">
                 <SearchResult coin={coin} setCoin={setCoin}/>
             </div>

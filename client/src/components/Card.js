@@ -17,7 +17,6 @@ const Card = ({currency}) => {
         let currencies = user.currencies
         let currenciesFilter = currencies.filter((c) => c.id != currency.id)
         setUser({...user, currencies: currenciesFilter})
-        console.log("currencies", currenciesFilter)
     }
 
     return (
@@ -27,7 +26,6 @@ const Card = ({currency}) => {
                 <p className="card-stats"><span className="card-stats-bold">Price</span>&nbsp;• ${parseFloat(currency?.price).toFixed(2)}</p>
                 <p className="card-stats"><span className="card-stats-bold">Rank </span>&nbsp;• {currency.rank}</p>
                 <p className="card-stats"><span className="card-stats-bold">Day Change </span>&nbsp;• {currency.day_change}%</p>
-                
             </div>
             <p className="card-delete" onClick={(e) => deleteCard(e)} >x</p>
         </div>

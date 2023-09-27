@@ -30,12 +30,9 @@
     }
 
     function addCoin(r){
-        
         let currencies = user?.currencies
         currencies.push(r)
         setUser({...user, currencies: currencies})
-
-        console.log("addCoin updated", user)
     }
 
         return(
