@@ -37,10 +37,11 @@ const Header = ({showModal, setShowModal}) => {
                     <h6>A Daily Crypto Organizer</h6>
                 </div>
                 <div className="space-div-right">
-                    <div className="logged-in">{user? `Hello, ${user?.username}`:<button className="login-btn" onClick={()=> setShowModal(true)}>Login</button>  }   </div>
                     <div className="avatar-container">
+                        <div className="avatar-collapse"></div>
                         <img onClick={(()=> setShowModal(true))} className="avatar" src={avatar}/>
-                        <div className="logout-btn" onClick={()=> logout()}>{user && `logout`}</div>
+                        {user?<div className="logout-btn" onClick={()=> logout()}>{`Hello, ${user?.username}`}</div> :<div className="logout-btn" onClick={()=> setShowModal(true)}>login</div> }
+                        
                     </div>
                 </div>
             </div>
