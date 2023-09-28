@@ -25,8 +25,7 @@ const Header = ({showModal, setShowModal}) => {
         fetch("/api/logout", {
             method: "DELETE"
         }).then(() => setUser(null))}   
-
-
+        
     return(
 
         <div className="header-container">
@@ -41,12 +40,11 @@ const Header = ({showModal, setShowModal}) => {
                         <div className="avatar-collapse"></div>
                         <img onClick={(()=> setShowModal(true))} className="avatar" src={avatar}/>
                         {user?<div className="logout-btn" onClick={()=> logout()}>{`Hello, ${user?.username}`}</div> :<div className="logout-btn" onClick={()=> setShowModal(true)}>login</div> }
-                        
                     </div>
                 </div>
             </div>
             <div className="search-container">
-                <div></div>
+                <div className="search-spacer"></div>
                 <form  onSubmit={(e)=> searchIt(e)}>
                     <input  value={searchTerm} className="search-input" placeholder="Search Currency..." onChange={(e)=> setSearchTerm(e.target.value)} />
                 </form>
