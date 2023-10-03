@@ -19,6 +19,10 @@ function App() {
 
 
 
+
+// console.log("palindrome", isIt(input))
+
+
   return (
     <>
        {showModal && <LoginModal setShowModal={setShowModal}/>}

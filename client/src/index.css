@@ -390,10 +390,10 @@ align-items: center;
   display: flex;
   justify-content: center;
   align-items: center;
-  min-height: 316px;
+  min-height: 336px;
   width: 530px;
   background-color: rgb(254, 253, 253);
-  /* padding: 20px; */
+
   border: 1px solid black;
   border-radius: 3px;
 

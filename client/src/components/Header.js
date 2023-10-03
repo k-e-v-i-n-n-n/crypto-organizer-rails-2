@@ -27,7 +27,6 @@ const Header = ({showModal, setShowModal}) => {
         }).then(() => setUser(null))}   
         
     return(
-
         <div className="header-container">
             <div className="header-title-container">
                 <div className="space-div-left"></div>
