@@ -17,12 +17,6 @@ function App() {
       else{setShowModal(true)}})
   }, [])
 
-
-
-
-// console.log("palindrome", isIt(input))
-
-
   return (
     <>
        {showModal && <LoginModal setShowModal={setShowModal}/>}
