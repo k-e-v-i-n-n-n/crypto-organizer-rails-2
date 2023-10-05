@@ -22,7 +22,6 @@ function App() {
        {showModal && <LoginModal setShowModal={setShowModal}/>}
       <Header setShowModal={setShowModal} showModal={showModal}/>
       <Organizer/>
-      
     </>
   );
 }
